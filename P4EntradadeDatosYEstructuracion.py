@@ -4,6 +4,7 @@ sumaCreditos = 0
 formatoGeneral = ''
 listaMaterias = ''
 while decision == '1':
+    print('cliclo')
     print('Ingrese una materia para añadir: ')
     materia = input()
     print('Ingrese los creditos de la materia agregada: ')
@@ -11,7 +12,7 @@ while decision == '1':
     reticulaDic.update({materia: creditos})
     print('Desea ingresar otro registro? \n1-Si \n2-No')
     decision = input()
-print(reticulaDic)
+print(reticulaDic.items())
 for materia, credito in reticulaDic.items():
     formatoGeneral += f'La asignatura: {materia} tiene: {credito} creditos.\n'
     sumaCreditos += int(creditos)
