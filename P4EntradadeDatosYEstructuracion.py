@@ -12,7 +12,7 @@ while decision == '1':
 print(reticulaDic.items())
 for materia, credito in reticulaDic.items():
     formatoGeneral += f'La asignatura: {materia} tiene: {credito} creditos.\n'
-    sumaCreditos += int(creditos)
+    sumaCreditos += int(credito)
     listaMaterias += f'{materia}\n'
 print(formatoGeneral)
 print(f'El total de creditos de las materias ingresadas fue: {sumaCreditos}\n')
