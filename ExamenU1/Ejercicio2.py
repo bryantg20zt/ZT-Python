@@ -3,9 +3,15 @@
 
 
 def determinarMayor(n1, n2):
-    correctDigit1 = int(reverseDigits(str(n1)))
-    correctDigit2 = int(reverseDigits(str(n2)))
-    return correctDigit1 if correctDigit1 > correctDigit2 else correctDigit2
+    try:
+        if determine3DigitsNumber(n1) and determine3DigitsNumber(n2):
+          correctDigit1 = int(reverseDigits(str(n1)))
+          correctDigit2 = int(reverseDigits(str(n2)))
+          return correctDigit1 if correctDigit1 > correctDigit2 else correctDigit2
+        else:
+            print('Los numeros ingresados deben de ser de 3 digitos')
+    except:
+        print("Debe ingresar un numero como parametros")
 
 
 def reverseDigits(n):
@@ -15,6 +21,10 @@ def reverseDigits(n):
         reversedString += n[contador]
         contador = contador - 1
     return reversedString
+
+
+def determine3DigitsNumber(num):
+    return len(str(num)) == 3
 
 
 print(determinarMayor(734, 893))
