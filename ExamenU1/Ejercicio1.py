@@ -40,15 +40,17 @@ try:
                 cont += 1
             a += 1
         if (dim % 2 == 1):
-            Mat[dim//2 + 1][dim//2 + 1] = cont
+            Mat[dim//2][dim//2] = cont
         return Mat
     
     dim = int(input("Ingrese el número de las dimensiones de la matriz(N): "))
     if dim >= 2 and dim <= 10:
         Matriz = CreaMatriz()
+        print("Matriz Automática: ")
         for a in Matriz:
             print(a)
         Caracol = LlenaMatrizCaracol(Matriz)
+        print("Matriz en forma de caracol: ")
         for b in Caracol:
             print(b)
     else:
